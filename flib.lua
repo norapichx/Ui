@@ -7,6 +7,12 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local CloseBind = Enum.KeyCode.RightControl
 
+if game.CoreGui:FindFirstChild('FluxLib') then
+    game.CoreGui:FindFirstChild('FluxLib'):Destroy()
+    destroyed = true
+end
+
+
 local FluxLib = Instance.new("ScreenGui")
 FluxLib.Name = "FluxLib"
 FluxLib.Parent = game.CoreGui
