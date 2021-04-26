@@ -7,12 +7,6 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local CloseBind = Enum.KeyCode.RightControl
 
-if game.CoreGui:FindFirstChild('FluxLib') then
-    game.CoreGui:FindFirstChild('FluxLib'):Destroy()
-    destroyed = true
-end
-
-
 local FluxLib = Instance.new("ScreenGui")
 FluxLib.Name = "FluxLib"
 FluxLib.Parent = game.CoreGui
@@ -2338,7 +2332,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 		end
-		function ContainerContent:Textbox(text,desc,callback)
+		function ContainerContent:Textbox(text,desc,disapper,callback)
 			if desc == "" then
 				desc = "There is no description for this textbox."
 			end
@@ -2470,7 +2464,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						if #TextBox.Text > 0 then
 							pcall(callback, TextBox.Text)
 							if disapper then
-								print("")
+								TextBox.Text = ""
 							end
 						end
 					end
