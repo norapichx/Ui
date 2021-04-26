@@ -2336,7 +2336,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			if desc == "" then
 				desc = "There is no description for this textbox."
 			end
-			local TextboxDescToggled = false
+			local TextboxDescToggled = true
 			local Textbox = Instance.new("TextButton")
 			local TextboxCorner = Instance.new("UICorner")
 			local Title = Instance.new("TextLabel")
