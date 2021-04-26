@@ -2402,19 +2402,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			CircleSmallCorner.Name = "CircleSmallCorner"
 			CircleSmallCorner.Parent = CircleSmall
 
-			Description.Name = "Description"
-			Description.Parent = Title
-			Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Description.BackgroundTransparency = 1.000
-			Description.Position = UDim2.new(-0.200942323, 0, 0.985714269, 0)
-			Description.Size = UDim2.new(0, 432, 0, 31)
-			Description.Font = Enum.Font.Gotham
-			Description.TextColor3 = Color3.fromRGB(255, 255, 255)
-			Description.TextSize = 15.000
-			Description.TextTransparency = 1
-			Description.TextWrapped = true
-			Description.TextXAlignment = Enum.TextXAlignment.Left
-
 			TextboxFrame.Name = "TextboxFrame"
 			TextboxFrame.Parent = Title
 			TextboxFrame.BackgroundColor3 = Color3.fromRGB(50, 53, 59)
