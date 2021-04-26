@@ -2336,7 +2336,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			if desc == "" then
 				desc = "There is no description for this textbox."
 			end
-			local TextboxDescToggled = true
+			local TextboxDescToggled = false
 			local Textbox = Instance.new("TextButton")
 			local TextboxCorner = Instance.new("UICorner")
 			local Title = Instance.new("TextLabel")
@@ -2464,7 +2464,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 						if #TextBox.Text > 0 then
 							pcall(callback, TextBox.Text)
 							if disapper then
-								TextBox.Text = ""
+								print("")
 							end
 						end
 					end
