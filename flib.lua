@@ -2333,9 +2333,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 		end
 		function ContainerContent:Textbox(text,disapper,callback)
-			if desc == "" then
-				desc = "There is no description for this textbox."
-			end
 			local TextboxDescToggled = false
 			local Textbox = Instance.new("TextButton")
 			local TextboxCorner = Instance.new("UICorner")
@@ -2412,7 +2409,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Description.Position = UDim2.new(-0.200942323, 0, 0.985714269, 0)
 			Description.Size = UDim2.new(0, 432, 0, 31)
 			Description.Font = Enum.Font.Gotham
-			Description.Text = desc
 			Description.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Description.TextSize = 15.000
 			Description.TextTransparency = 1
