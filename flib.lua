@@ -2332,7 +2332,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 		end
-		function ContainerContent:Textbox(text,desc,disapper,callback)
+		function ContainerContent:Textbox(text,desc,callback)
 			if desc == "" then
 				desc = "There is no description for this textbox."
 			end
