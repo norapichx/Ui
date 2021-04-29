@@ -106,7 +106,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = FluxLib
 	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-	MainFrame.BackgroundColor3 = Color3.fromRGB(50, 53, 59)
+	MainFrame.BackgroundColor3 = Color3.fromRGB(28, 28, 28) -- สีพื้นหลัง 
 	MainFrame.ClipsDescendants = true
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 	MainFrame.Size = UDim2.new(0, 0, 0, 0)
@@ -117,7 +117,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 	LeftFrame.Name = "LeftFrame"
 	LeftFrame.Parent = MainFrame
-	LeftFrame.BackgroundColor3 = Color3.fromRGB(47, 49, 54)
+	LeftFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- สี tab ฝั่งซ้าย
 	LeftFrame.Size = UDim2.new(0, 205, 0, 484)
 
 	LeftCorner.CornerRadius = UDim.new(0, 5)
@@ -141,12 +141,12 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	Title.Parent = LeftFrame
 	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Title.BackgroundTransparency = 1.000
-	Title.Position = UDim2.new(0.097560972, 0, 0.0475206636, 0)
+	Title.Position = UDim2.new(0.097560972, 0, 0.0275206636, 0) -- ตำแหน่งชื่อ
 	Title.Size = UDim2.new(0, 111, 0, 34)
 	Title.Font = Enum.Font.GothamBold
 	Title.Text = text
-	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Title.TextSize = 25.000
+	Title.TextColor3 = Color3.fromRGB(255, 0, 0) -- สีชื่อ
+	Title.TextSize = 30.000 -- ขนาดชื่อ
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
 	BottomText.Name = "BottomText"
@@ -157,9 +157,9 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	BottomText.Size = UDim2.new(0, 113, 0, 28)
 	BottomText.Font = Enum.Font.Gotham
 	BottomText.Text = bottom
-	BottomText.TextColor3 = Color3.fromRGB(255, 255, 255)
-	BottomText.TextSize = 14.000
-	BottomText.TextTransparency = 0.300
+	BottomText.TextColor3 = Color3.fromRGB(255, 255, 255) -- สีคำใต้ชื่อ
+	BottomText.TextSize = 18.000 -- ขนาด
+	BottomText.TextTransparency = 0.000 -- ความโปร่ง
 	BottomText.TextXAlignment = Enum.TextXAlignment.Left
 
 	TabHold.Name = "TabHold"
@@ -238,10 +238,10 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		NotificationBaseCorner.Name = "NotificationBaseCorner"
 		NotificationBaseCorner.Parent = NotificationBase
 
-		NotificationFrame.Name = "NotificationFrame"
+		NotificationFrame.Name = "NotificationFrame" -- สีแจ้งเตือน
 		NotificationFrame.Parent = NotificationBase
 		NotificationFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-		NotificationFrame.BackgroundColor3 = Color3.fromRGB(50, 53, 59)
+		NotificationFrame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
 		NotificationFrame.ClipsDescendants = true
 		NotificationFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 		NotificationFrame.Size = UDim2.new(0, 0, 0, 0)
@@ -270,23 +270,24 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		NotificationTitle.Position = UDim2.new(0.0400609747, 0, 0.0761325806, 0)
 		NotificationTitle.Size = UDim2.new(0, 111, 0, 34)
 		NotificationTitle.Font = Enum.Font.GothamBold
-		NotificationTitle.Text = Title.Text .. " | NOTIFICATION"
-		NotificationTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-		NotificationTitle.TextSize = 24.000
+		NotificationTitle.Text = Title.Text .. " | NOTIFICATION" -- คำแจ้งเตือน
+		NotificationTitle.TextColor3 = Color3.fromRGB(255, 0, 0) -- สีแจ้งเตือน
+		NotificationTitle.TextSize = 20.000 -- ขนาด
 		NotificationTitle.TextXAlignment = Enum.TextXAlignment.Left
 		NotificationTitle.TextTransparency = 1
 
 		CloseBtn.Name = "CloseBtn"
 		CloseBtn.Parent = NotificationFrame
-		CloseBtn.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+		CloseBtn.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- สีปิดคำเตือน
 		CloseBtn.ClipsDescendants = true
 		CloseBtn.Position = UDim2.new(0.0403124988, 0, 0.720855951, 0)
 		CloseBtn.Size = UDim2.new(0, 366, 0, 43)
 		CloseBtn.AutoButtonColor = false
 		CloseBtn.Font = Enum.Font.Gotham
+		CloseBtn.Font = Enum.Font.GothamBold
 		CloseBtn.Text = buttontitle
 		CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-		CloseBtn.TextSize = 15.000
+		CloseBtn.TextSize = 20.000 -- ขนาด
 		CloseBtn.TextTransparency = 1
 		CloseBtn.BackgroundTransparency = 1
 
@@ -302,8 +303,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		NotificationDesc.Size = UDim2.new(0, 309, 0, 82)
 		NotificationDesc.Font = Enum.Font.Gotham
 		NotificationDesc.Text = desc
-		NotificationDesc.TextColor3 = Color3.fromRGB(255, 255, 255)
-		NotificationDesc.TextSize = 15.000
+		NotificationDesc.TextColor3 = Color3.fromRGB(255, 255, 255) -- สี อธิบาย
+		NotificationDesc.TextSize = 20.000 -- ขนาดคำอธิบาย
 		NotificationDesc.TextWrapped = true
 		NotificationDesc.TextTransparency = 1
 		
@@ -432,7 +433,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		TabTitle.Font = Enum.Font.Gotham
 		TabTitle.Text = text
 		TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-		TabTitle.TextSize = 15.000
+		TabTitle.TextSize = 16.000
 		TabTitle.TextXAlignment = Enum.TextXAlignment.Left
 		TabTitle.TextTransparency = .3
 		
@@ -527,7 +528,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Button.Name = "Button"
 			Button.Parent = Container
-			Button.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Button.BackgroundColor3 = Color3.fromRGB(51, 51, 51) -- สีปุ่ม button
 			Button.ClipsDescendants = true
 			Button.Position = UDim2.new(0.370312512, 0, 0.552631557, 0)
 			Button.Size = UDim2.new(0, 457, 0, 43)
@@ -541,7 +542,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			ButtonCorner.Name = "ButtonCorner"
 			ButtonCorner.Parent = Button
 
-			Title.Name = "Title"
+			Title.Name = "Title" -- คำ button
 			Title.Parent = Button
 			Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Title.BackgroundTransparency = 1.000
@@ -579,7 +580,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			CircleSmallCorner.Name = "CircleSmallCorner"
 			CircleSmallCorner.Parent = CircleSmall
 
-			Description.Name = "Description"
+			Description.Name = "Description" -- คำอธิบาย
 			Description.Parent = Title
 			Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Description.BackgroundTransparency = 1.000
@@ -750,7 +751,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Toggle.Name = "Toggle"
 			Toggle.Parent = Container
-			Toggle.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Toggle.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 			Toggle.ClipsDescendants = true
 			Toggle.Position = UDim2.new(0.110937506, 0, 0.67653507, 0)
 			Toggle.Size = UDim2.new(0, 457, 0, 43)
@@ -1021,7 +1022,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Slider.Name = "Slider"
 			Slider.Parent = Container
-			Slider.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Slider.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 			Slider.ClipsDescendants = true
 			Slider.Position = UDim2.new(0.189062506, 0, 0.648612201, 0)
 			Slider.Size = UDim2.new(0, 457, 0, 60)
@@ -1139,7 +1140,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Value.Font = Enum.Font.Gotham
 			Value.Text = tostring(start and math.floor((start / max) * (max - min) + min) or 0)
 			Value.TextColor3 = Color3.fromRGB(255, 255, 255)
-			Value.TextSize = 15.000
+			Value.TextSize = 17.000
 			Value.TextTransparency = 0.300
 			Value.TextXAlignment = Enum.TextXAlignment.Right
 			
@@ -1316,7 +1317,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Dropdown.Name = "Dropdown"
 			Dropdown.Parent = Container
-			Dropdown.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Dropdown.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 			Dropdown.ClipsDescendants = true
 			Dropdown.Position = UDim2.new(0.110937499, 0, 0.67653507, 0)
 			Dropdown.Size = UDim2.new(0, 457, 0, 43)
@@ -1513,7 +1514,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				
 			Item.Name = "Item"
 			Item.Parent = DropItemHolder
-			Item.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Item.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 			Item.ClipsDescendants = true
 			Item.Size = UDim2.new(0, 427, 0, 25)
 			Item.AutoButtonColor = false
@@ -1817,7 +1818,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Colorpicker.Name = "Colorpicker"
 			Colorpicker.Parent = Container
-			Colorpicker.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Colorpicker.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 			Colorpicker.ClipsDescendants = true
 			Colorpicker.Position = UDim2.new(0.110937499, 0, 0.67653507, 0)
 			Colorpicker.Size = UDim2.new(0, 457, 0, 43)
@@ -1967,7 +1968,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Confirm.Name = "Confirm"
 			Confirm.Parent = Title
-			Confirm.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Confirm.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 			Confirm.ClipsDescendants = true
 			Confirm.Position = UDim2.new(2.3791616, 0, 1.97633278, 0)
 			Confirm.Size = UDim2.new(0, 144, 0, 42)
@@ -2280,7 +2281,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Line.Name = "Line"
 			Line.Parent = Container
-			Line.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Line.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 			Line.ClipsDescendants = true
 			Line.Position = UDim2.new(0, 0, 0.70091325, 0)
 			Line.Size = UDim2.new(0, 457, 0, 4)
@@ -2303,7 +2304,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Label.Name = "Label"
 			Label.Parent = Container
-			Label.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Label.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 			Label.ClipsDescendants = true
 			Label.Position = UDim2.new(0.370312512, 0, 0.552631557, 0)
 			Label.Size = UDim2.new(0, 457, 0, 43)
@@ -2353,7 +2354,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Textbox.Name = "Textbox"
 			Textbox.Parent = Container
-			Textbox.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Textbox.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 			Textbox.ClipsDescendants = true
 			Textbox.Position = UDim2.new(0.0459499061, 0, 0.734449744, 0)
 			Textbox.Size = UDim2.new(0, 457, 0, 43)
@@ -2421,7 +2422,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			TextboxFrame.Name = "TextboxFrame"
 			TextboxFrame.Parent = Title
-			TextboxFrame.BackgroundColor3 = Color3.fromRGB(50, 53, 59)
+			TextboxFrame.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 			TextboxFrame.Position = UDim2.new(1.82300889, 0, 0.202380955, 0)
 			TextboxFrame.Size = UDim2.new(0, 161, 0, 26)
 
@@ -2436,7 +2437,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			TextBox.Font = Enum.Font.Gotham
 			TextBox.Text = ""
 			TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-			TextBox.TextSize = 15.000
+			TextBox.TextSize = 18.000
 			TextBox.TextTransparency = 0.300
 
 			ArrowBtn.Name = "ArrowBtn"
@@ -2578,7 +2579,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Bind.Name = "Bind"
 			Bind.Parent = Container
-			Bind.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+			Bind.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 			Bind.ClipsDescendants = true
 			Bind.Position = UDim2.new(0.40625, 0, 0.828947306, 0)
 			Bind.Size = UDim2.new(0, 457, 0, 43)
@@ -2746,5 +2747,3 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	end
 	return Tabs
 end
-return Flux
-
