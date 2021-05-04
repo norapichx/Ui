@@ -21,28 +21,48 @@ end)
 
 P1:Button("TP On", function(x)
         print("Tp On")
+        Tkill = x
+        if Tkill == false then return end
+        while Tkill do wait()
         local lplayer = game:GetService("Players").LocalPlayer
-        local runService = game:GetService('RunService')
-        _G.TP = runService.Stepped:Connect(function()
-            --game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        --local runService = game:GetService('RunService')
+        --_G.TP = runService.Stepped:Connect(function()
         lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[_G.Plr].Character.HumanoidRootPart.CFrame*CFrame.new(-1, 0, 2.2)
         if game:GetService("Players")[_G.Plr].Character.Humanoid.Health <= 0 or nil then
-            _G.TP:Disconnect()
+            Tkill = false
         end
-
-     end)
+    end
+     --end)
 end)
 P1:Button("TP Off", function(x)
 print("Tp Off")
-_G.TP:Disconnect()
+Tkill = false
+-- _G.TP:Disconnect()
 end)
+-- P1:Toggle("View", false, function(x)
+--     View = x
+-- if View == true then
+-- if game:GetService("Players")[_G.Plr].Character.Humanoid then
+--     game:GetService("Workspace").CurrentCamera.CameraSubject = game:GetService("Players")[_G.Plr].Character.Humanoid
+-- else
+--     game:GetService("Workspace").CurrentCamera.CameraSubject = game:GetService("Players")[_G.Plr].Character.Head
+-- end
+-- end
+-- if View == false then
+--     if lplayer.Character.Humanoid then
+--         game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Humanoid
+--     else
+--         game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Head
+--     end
+-- end
+-- end)
 P1:Label("--------------------------------", Color3.fromRGB(255, 255, 255))
 P1:Button("Bring On", function(x)
     print("Bring On")
     local lplayer = game:GetService("Players").LocalPlayer
     local runService = game:GetService('RunService')
     _G.TP = runService.Stepped:Connect(function()
-        game:GetService("Players")[_G.Plr].Character.HumanoidRootPart.CFrame = lplayer.Character.HumanoidRootPart.CFrame*CFrame.new(0, 0, -15)
+        game:GetService("Players")[_G.Plr].Character.HumanoidRootPart.CFrame = lplayer.Character.HumanoidRootPart.CFrame*CFrame.new(0, 2.5, -15)
  end)
 end)
 P1:Button("Bring Off", function(x)
@@ -56,7 +76,7 @@ P1:Toggle("Auto Heal (BloodFruit)", false, function(x)
     if Heal == false then return end
         while Heal do wait()
 local lplayer = game:GetService("Players").LocalPlayer
-if lplayer.Character.Humanoid.Health <= 80 then
+if lplayer.Character.Humanoid.Health <= 95 then
 local food = "Bloodfruit"
 local Event = game:GetService("ReplicatedStorage").Events.UseBagItem
 Event:FireServer(food)
@@ -69,6 +89,11 @@ local Item = "Crystal Stick"
 local Event = game:GetService("ReplicatedStorage").Events.CraftItem
 Event:FireServer(Item)
 end)
+P2:Button("Magnetite Stick", function(x)
+    local Item = "Magnetite Stick"
+    local Event = game:GetService("ReplicatedStorage").Events.CraftItem
+    Event:FireServer(Item)
+    end)
 P2:Button("Magnetite Axe", function(x)
     local Item = "Magnetite Axe"
     local Event = game:GetService("ReplicatedStorage").Events.CraftItem
