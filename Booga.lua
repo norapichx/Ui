@@ -83,7 +83,9 @@ Event:FireServer(food)
 end
 end
 end)
-
+P1:Button("Toxic", function(x)
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ Noob", "All")
+end)
 P2:Button("Crystal Stick", function(x)
 local Item = "Crystal Stick"
 local Event = game:GetService("ReplicatedStorage").Events.CraftItem
@@ -134,6 +136,17 @@ P3:Toggle("Drop", false, function(x)
 while Drops do wait()
 local item = tostring(_G.item)
 game.ReplicatedStorage.Events.DropBagItem:FireServer(item)
+end
+end)
+
+P3:Toggle("Sell", false, function(x)
+ sell = x
+ if sell == false then return end
+while sell do wait()
+local Item = "Bloodfruit"
+local amount = math.pi
+local price = math.pi
+game:GetService("ReplicatedStorage").Events.SubmitTrade:FireServer(Item, amount, price)
 end
 end)
 
