@@ -84,7 +84,7 @@ end
 end
 end)
 P1:Button("Toxic", function(x)
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ Noob", "All")
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Ez Dog get some shlt pu55y", "All")
 end)
 P2:Button("Crystal Stick", function(x)
 local Item = "Crystal Stick"
